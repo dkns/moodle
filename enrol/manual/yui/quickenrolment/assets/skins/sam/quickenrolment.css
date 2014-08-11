@@ -54,7 +54,7 @@ Structure of the user enroller panel
 .user-enroller-panel .uep-search-results .user .details {width:250px;float:left;margin:3px;}
 .user-enroller-panel .uep-search-results .user .options {padding-right:7px;font-size:8pt;margin:3px;}
 .user-enroller-panel .uep-search-results .user .options .enrol {margin:3px;float:right;cursor:pointer;}
-.user-enroller-panel .uep-search-results .user.enrolled .count {width:40px;color:#eee;}
+.user-enroller-panel .uep-search-results .user.enrolled .count {width:40px;}
 .user-enroller-panel .uep-search-results .uep-more-results {background-color:#eee;padding:5px;border-top:1px solid #BBB;}
 
 .user-enroller-panel .uep-loading-lightbox {position:absolute;width:100%;height:100%;top:0;left:0;background-color:#FFF;min-width:50px;min-height:50px;}

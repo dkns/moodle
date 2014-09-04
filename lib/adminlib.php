@@ -3797,6 +3797,7 @@ class admin_setting_sitesettext extends admin_setting_configtext {
         $record->{$this->name} = $data;
         $record->timemodified  = time();
 
+        update_course($record);
         course_get_format($SITE)->update_course_format_options($record);
         $DB->update_record('course', $record);
 

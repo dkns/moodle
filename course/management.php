@@ -243,6 +243,9 @@ if ($action !== false && confirm_sesskey()) {
             echo $renderer->header();
             echo $renderer->heading(get_string('deletecategory', 'moodle', $category->get_formatted_name()));
 
+            // Make sure we won't timeout when deleting a lot of courses (more than 500)
+            $settimeout = core_php_time_limit::raise('0');
+
             if ($data = $mform->get_data()) {
                 // The form has been submit handle it.
                 if ($data->fulldelete == 1 && $category->can_delete_full()) {

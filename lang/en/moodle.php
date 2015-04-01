@@ -463,6 +463,7 @@ $string['deleteall'] = 'Delete all';
 $string['deleteallcannotundo'] = 'Delete all - cannot be undone';
 $string['deleteallcomments'] = 'Delete all comments';
 $string['deleteallratings'] = 'Delete all ratings';
+$string['deleteallpages'] = 'Delete all pages';
 $string['deletecategory'] = 'Delete category: {$a}';
 $string['deletecategoryempty'] = 'This category is empty.';
 $string['deletecategorycheck'] = 'Are you absolutely sure you want to completely delete this category <b>\'{$a}\'</b>?<br />This will move all courses into the parent category if there is one, or into Miscellaneous.';

@@ -183,6 +183,20 @@ function wiki_reset_userdata($data) {
                 }
             }
         }
+
+        if (!empty($data->reset_wiki_pages)) {
+            $subwikis = $DB->get_records('wiki_subwikis', array('wikiid' => $wiki->id));
+
+            foreach ($subwikis as $subwiki) {
+                if ($pages = $DB->get_records('wiki_pages', array('subwikiid' => $subwiki->id))) {
+                    foreach ($pages as $page) {
+                        $DB->delete_records('wiki_pages', array('subwikiid' => $subwiki->id, 'id' => $page->id));
+                        $status[] = array('component' => $componentstr, 'item' => get_string('deleteallpages', 'wiki'), 'error' => $errors);
+                    }
+                }
+            }
+        }
+
     }
     return $status;
 }
@@ -192,6 +206,7 @@ function wiki_reset_course_form_definition(&$mform) {
     $mform->addElement('header', 'wikiheader', get_string('modulenameplural', 'wiki'));
     $mform->addElement('advcheckbox', 'reset_wiki_tags', get_string('removeallwikitags', 'wiki'));
     $mform->addElement('advcheckbox', 'reset_wiki_comments', get_string('deleteallcomments'));
+    $mform->addElement('advcheckbox', 'reset_wiki_pages', get_string('deleteallpages', 'wiki'));
 }
 
 /**

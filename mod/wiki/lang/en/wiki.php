@@ -50,6 +50,7 @@ $string['deleteupload'] = 'Delete';
 $string['deletedbegins'] = 'Deleted begins';
 $string['deletedends'] = 'Deleted ends';
 $string['deleteversions'] = 'Delete page versions';
+$string['deleteallpages'] = 'Delete all wiki pages';
 $string['addedbegins'] = 'added begins';
 $string['addedends'] = 'added ends';
 $string['diff'] = 'Diff';

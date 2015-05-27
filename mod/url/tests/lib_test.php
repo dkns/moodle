@@ -61,6 +61,7 @@ class mod_url_lib_testcase extends basic_testcase {
         $this->assertTrue(url_appears_valid_url('http://www.example.com/index.php?xx=yy&zz=aa'));
         $this->assertTrue(url_appears_valid_url('https://user:password@www.example.com/žlutý koníček/lala.txt'));
         $this->assertTrue(url_appears_valid_url('ftp://user:password@www.example.com/žlutý koníček/lala.txt'));
+        $this->assertTrue(url_appears_valid_url('http://www.example.com/öÖäÄüÜß koníček/lala.txt#hmmmm'));
 
         $this->assertFalse(url_appears_valid_url('http:example.com'));
         $this->assertFalse(url_appears_valid_url('http:/example.com'));
